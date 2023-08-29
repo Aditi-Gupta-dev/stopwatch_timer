@@ -1,0 +1,228 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Open+Sans:wght@400;500;600;700;800&family=Poppins&family=Roboto+Slab:wght@100;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+  *{
+    padding: 0;margin: 0;box-sizing: border-box;
+  }
+  :root{
+    --navbar-bg:#064663;
+    --body-bg:#041C32;
+    --text-light:#fff;
+    --text-dark:#000;
+    --btn-color:#1b6bc1;
+    --icon-color:#fff;
+    --st-bg:#064663;
+    --box:#444343;
+    --btn-hover:#0e3662;
+    --st-hover:#053045;
+
+
+  }
+  .lightmode{
+    --navbar-bg:rgb(249, 249, 255);
+    --body-bg:#FBF6F0;
+    --text-light:#000;
+    --text-dark:#000;
+    --btn-color:#FFDA77;
+    --icon-color:rgb(241, 185, 43);
+    --st-bg:#fff;
+    --box:#aaa;
+    --btn-hover:#efb413;
+    --st-hover:rgba(238, 230, 230, 0.1);
+
+
+  }
+body {
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 100vh;
+    margin: 0;
+    background-color:var(--body-bg);
+  }
+  .navbar{
+    position:fixed;
+    width:100%;
+    border-bottom: 2px solid grey;
+    background-color:var(--navbar-bg);
+    box-shadow: 0px 2px 20px 0px var(--box);
+    opacity:0.85;
+    z-index:100;   
+}
+.navbar-container{
+  display:flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-flow:row wrap;
+  height:64px;
+}
+.navbar-items{
+  order:2;
+  display: flex;
+  justify-content:space-around;
+  flex-flow:row wrap;
+}
+.navbar-items li{
+  list-style: none;
+  text-transform: uppercase;
+  font-weight:500;
+  font-size: 1.6rem;
+  margin:auto 2.2rem;
+
+}
+.heading{
+  order:1;
+  font-size: 2rem;
+  color:var(--text-light);
+  text-transform: capitalize;
+
+
+}
+#icon{
+  color:var(--icon-color);
+  border:2px solid var(--icon-color);
+  border-radius: 50%;
+  background-color: #000;
+  padding:.5rem .7rem;
+}
+  .container {
+    display: flex;
+    max-width: 1200px;
+    justify-content:space-around;
+    align-items:start;
+    gap: 3rem;
+    height: auto;
+    margin: 1rem auto;
+    margin-top:100px;
+  }
+  
+  .item{
+    min-width: 350px;
+  }
+  
+  .stopwatch, .timer {
+    text-align: center;
+    padding: 20px;
+    background-color:var(--st-bg);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 5px;
+    border-radius: 10%;
+    width: 50%;
+    margin: .5rem auto;
+    color:var(--text-light)
+  }
+  h1{
+    margin:10px auto;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+  
+  .timer{
+    max-height: 300px;
+  }
+  .timer h1{
+    margin-bottom: 20px;
+  }
+  .stopwatch{
+    display: flex;
+    flex-direction: column;
+  }
+  .time {
+    font-size: 32px;
+    margin: 10px 0;
+    
+  }
+  .button-1,.button-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+  }
+  .button-1 button,.button-2 button{
+    width: 80px;
+    padding: .5rem;
+    margin:1rem;
+  }
+  .button-2 button{
+    margin-top:2rem  }
+  #clearLaps{
+    width: 120px;
+    margin:1px auto;
+    padding: .5rem;
+  }
+  #lapTimes{
+    font-size: 1rem;
+    margin:5px auto;
+  }
+  
+  button {
+   
+    font-size: .5rem;
+    padding: 1rem;
+    font-size: 16px;
+    background-color:var(--btn-color);
+    color:var(--text-light);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  input {
+    padding: .5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  /* ---hover-- */
+  button:hover{
+    background-color: var(--btn-hover);
+    transform: scale(1.2);
+  }
+  .stopwatch:hover,.timer:hover{
+    background-color: var(--st-hover);
+    box-shadow: rgba(97, 94, 94, 0.25) 0px 14px 28px, rgba(125, 120, 120, 0.22) 0px 10px 10px;
+  }
+
+
+
+/* ---media queries-- */
+@media(max-width:769px){
+  .container{
+    width: 500px;
+    display: block;
+    margin-top:50px;
+  }
+  .stopwatch,.timer{
+    width:50%;
+    margin-top:50px;
+  }
+  .heading{
+    font-size: 1.4rem;
+  }
+  #icon{
+    font-size: 1.5rem;
+  }
+}
+
+@media(max-width:415px){
+ .heading{
+  font-size:1.2rem
+ }
+  .container{
+    width:300px;
+    display: block;
+    margin:20px;
+    margin-top: 80px;
+  }
+  .stopwatch,.timer{
+    width:90%;
+    margin-top:20px;
+  }
+  #icon{
+    font-size: 1rem;
+  }
+}
+  

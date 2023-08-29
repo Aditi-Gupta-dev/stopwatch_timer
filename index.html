@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/7bfd0428f1.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>Stopwatch and Timer</title>
+</head>
+<body>
+  <nav>
+    <div class="navbar contain">
+        <div class="navbar-container">
+            
+            <ul class="navbar-items">
+                
+                <li><i class="fa-solid fa-lightbulb" id="icon"></i></li>
+            
+            </ul>
+            <h2 class="heading">adjust theme</h2>
+        </div>
+    </div>
+</nav>
+  
+  
+  <div class="container">
+
+    <div class="stopwatch item">
+      <h1>Stopwatch</h1>
+      <div class="time" id="stopwatchTime">00:00:00</div>
+      <div class="button-1">
+        <button id="startStopwatch">Start</button>
+      <button id="resetStopwatch">Reset</button>
+      <button id="lapStopwatch">Lap</button>
+      </div>
+      <div id="lapTimes"></div>
+      <button id="clearLaps" clas="btn">Clear Laps</button>
+    </div>
+    <div class="timer item">
+      <h1>Timer</h1>
+      
+      <div class="time" id="timerTime">00:00:00</div>
+      <input type="text" placeholder="HH:MM:SS" id="timerInput">
+      <div class="button-2">
+        <button id="startTimer">Start</button>
+      <button id="resetTimer">Reset</button>
+      </div>
+      
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
